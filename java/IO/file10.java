@@ -27,8 +27,7 @@ public class file10 {
 		System.out.println(fc.size()); //원본 파일 용량 확인
 		FileChannel fc2=f4.getChannel();
 		
-		
-		fc.transferTo(0, fc2.size(), fc2);
+		fc.transferTo(0, fc.size(), fc2);	//transferTo:  데이터 0byte ~ 크기만큼 내용 복사
 		
 		f4.close();
 		f3.close();

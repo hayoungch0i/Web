@@ -1,6 +1,7 @@
 package IO;
 
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 //Reader, Writer, File -> ASCII
@@ -22,12 +23,12 @@ public class file11 {
 			Files.copy(data1, data2); 
 			*/
 			
-			/*
+			
 			//Files.move(원래경로, 목적경로): 파일을 다른 경로로 이동
 			Path data3=Paths.get("d://images//gugu2.txt");
 			Path data4=Paths.get("d://gugu2.txt");
 			Files.move(data3, data4);
-			*/
+			
 			
 			/*
 			//Files.createFile(경로): 파일 생성

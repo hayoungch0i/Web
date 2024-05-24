@@ -7,7 +7,7 @@ import java.io.FileReader;
 FileReader -> Buffer
 buffer : 메모리를 활용하여 데이터를 출력 또는 입력 (temp)
 buffer는 임시 저장 공간의 데이터이므로 read 또는 readline 사용시
- 무조건 데이터는 순차적으로 삭제 시킵니다. 
+무조건 데이터는 순차적으로 삭제 시킵니다. 
 */
 
 public class file6 {

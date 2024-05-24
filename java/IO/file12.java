@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 //Stream 활용법(FileinputStream)
 //txt, jpg, png... 파일도 가능 => byte
 //FileInputStream: 파일을 로드한 후 해당 내용을 byte로 변환하여 저장
-public class files12 {
+public class file12 {
 
 	public static void main(String[] args) {
 		try {
