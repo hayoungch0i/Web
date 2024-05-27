@@ -8,7 +8,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 
-public class net_file5 {
+public class net5 {
 
 	public static void main(String[] args) {
 		System.out.println("Server Connection");

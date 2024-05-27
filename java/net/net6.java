@@ -6,7 +6,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 //Socket 통신 Client 
-public class net_file6 {
+public class net6 {
 
 	static Socket sk= null;
 	public static void main(String[] args) {

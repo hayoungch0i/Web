@@ -4,7 +4,7 @@ import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class net_file2 {
+public class net2 {
 
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {

@@ -9,7 +9,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 //네트워크 URL 정보 현황
-public class net_file4 {
+public class net4 {
 
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {

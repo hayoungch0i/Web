@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 //외부서버에 있는 이미지
-public class net_file3 {
+public class net3 {
 
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {

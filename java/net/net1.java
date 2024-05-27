@@ -17,7 +17,7 @@ import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.util.Arrays;
 
-public class net_file1 {
+public class net1 {
 
 	public static void main(String[] args) throws Exception {
 		//Inet4Address.getByName("도메인"): 접속할 도메인의 IP 주소
