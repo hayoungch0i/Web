@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="imagetoolbar" content="no">
+    <title>회원가입 약관동의</title>
+    <link rel="stylesheet" type="text/css" href="./new_member.css?v=1">
+</head>
+<body>
+<main class="shop_main">
+  <section class="subpage">
+    <label class="mbship_title">
+        <p>MEMBER-SHIP</p>
+        <ul>
+          <li>01. 약관동의</li>
+          <li><img src="./images/step_on.png" /></li>
+          <li>02. 정보입력</li>
+          <li><img src="./images/step_off.png" /></li>
+          <li>03. 가입완료</li>
+        </ul>
+      </label>
+      <fieldset class="mbship_box">
+        <h3>약관동의</h3>
+        <span class="agree_span">
+        <label class="mbship_text">
+          <input type="checkbox" id="all_agree" onclick="all_check()"> 의 모든 약관을 확인하고 전체 동의 합니다.
+          (전체동의, 선택항목도 포함됩니다.)
+        </label>
+        <label class="mbship_text">
+            <input type="checkbox" id="agck1" onclick="all_checked()"><font color="red"> (필수)</font>이용약관
+        </label>
+        <div class="agree_text" id="ag1">
+        	
+        </div>
+        <label class="mbship_text">
+            <input type="checkbox" id="agck2" onclick="all_checked()"><font color="red"> (필수)</font> 개인정보 수집 및 이용
+        </label>
+        <div class="agree_text" id="ag2"></div>
+        </span>
+        <input type="button" class="next_btn" value="다음단계" onclick="join();">
+      </fieldset>
+  </section>
+</main>
+<script src="./member.js?v=4" ></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>split 사용법(JS)+ random함수를 이용한 보안코드 생성</title>
+</head>
+<body>
+<!--보안코드 출력-->
+<div style="border: 1px solid black; width:120px; height:60px; background-color: black" id=seco></div><br> 
+<input type="text" maxlength="4" placeholder="보안문자를 입력해주세요" class=sec_text>
+<button type="button" onclick="sec_load()">전체 새로고침</button>
+<button type="button" onclick="sec_check()">확인</button>
+</body>
+<script>
+//random 함수를 이용한 보안코드
+	function sec_check(){
+		if(document.getElementById("seco").value==sec_text_num){
+			console.log("collect");
+		}
+		else{
+			console.log("NO");
+		}
+}
+	function sec_load(){
+		var w=1;
+		var security="";
+		var seimg=""; //이미지 출력 태그에 사용하는 변수
+		do{
+			var n=Math.floor(Math.random()*10);
+			security+=n;
+			seimg+="<img src='./no/no"+n+".png' style='width:30px;height:60px;float:left'>";
+			w++;
+		}while(w<5);
+		document.getElementById("seco").innerHTML=seimg;
+		document.getElementById("seco").value=security;
+		//document.getElementById("sec_num").innerHTML=seimg;
+		console.log(security)
+	}
+	sec_load();
+	
+	function page_load(){
+		window.location.reload();
+	}
+// split은 문자열은 해당 문자 기본으로 배열화시키는 함수입니다. 
+// 배열로 분리 된 후 배열번호를 이용하여 추가 분리 및 출력이 가능합니다.
+	var code="?abc=333&bbb=123";
+	var data=code.split("&bbb");
+	var bbb=data[1];
+	var abc=data[0].split("?abc=");
+	console.log(data);
+	console.log(abc[1]);
+</script>
+</html>
