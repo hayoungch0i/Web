@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>간편 회원가입 페이지</title>
+</head>
+<body>
+간편회원가입<br>
+<form id="f" method="post" action="http://172.30.1.35:8080/web/sign.do">
+<input type="text" name="code"> <input type="button" value="새로고침" onload="randnum()" onclick="randnum()"> <br>
+<input type="text" name="security" placeholder="위의 보안코드 4자리 숫자를 입력 하세요"><br>
+<input type="text" name="mid" placeholder="가입하실 아이디를 입력하세요"><br>
+<input type="text" name="mpw" placeholder="패스워드를 입력하세요"><br>
+<input type="button" value="회원가입" onclick="check()"><br>
+</form>
+</body>
+<script>
+window.onload=(function randnum(){
+	 var num=Math.floor(Math.random()*9000)+1000;
+	 console.log(num);
+	 f.code.value=num;
+});
+
+function check(){
+	if(f.code.value!=f.security.value){
+		alert("보안코드가 잘못 되었습니다.");
+	}
+	else if(f.mid.value=="" || f.mid.value==null){
+		alert("아이디를 입력해주세요");
+		f.mid.focus();
+	}
+	else if(f.mpw.value=="" || f.mid.value==null){
+		alert("패스워드를 입력해주세요");
+		f.mpw.focus();
+	}
+	else{
+		f.submit();
+	}
+}
+
+</script>
+</html>
