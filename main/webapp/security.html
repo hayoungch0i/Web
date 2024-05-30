@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript - 암호화 형태</title>
+</head>
+<body>
+<form id="frm" method="get" action="./securityok.do">
+<input type="hidden" name="pwd" value="">
+비밀번호: <input type="text" name="password">
+</form>
+<!--한글 인코딩 -->
+<form id="frm2">
+고객명: <input type="text" name="user">
+<input type="button" value="클릭" onclick="base64()">
+</form>
+</body>
+<script>
+/*
+ base64 암호화를 이용하여 사용자가 입력한 값을 다른 문자로 변환 가능
+ 복호화도 가능함 단, 개인정보에는 사용하지 않음(유출시 복호화 가능);
+ */
+function base64(){
+	 var word=frm2.user.value;
+	 //var encode=window.btoa(word);
+	 var encode=window.btoa(encodeURIComponent(word)); //한글 암호화 시키는 방식
+	 console.log(encode);
+ }
+ 
+function abc(){
+	var pw=frm.password.value;
+	var encode=window.btoa(pw); //사용자가 입력한 값을 base64 암호화
+	var decode=window.atob(encode); //base64 암호화를 원래 단어로 복원
+	
+	frm.pwd.value=encode; //암호화된 문자값을 back-end로 전달
+	//한글과 특수문자는 base64로 암호화 할 수 없음	
+}
+</script>
+
+</html>

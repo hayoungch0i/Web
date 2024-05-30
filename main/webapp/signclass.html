@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+</head>
+<body>
+	<label><input type="radio" value="1" name="member" onclick="change1()" onload="change1()" checked >일반 회원</label>
+    <label><input type="radio" value="2" name="member" onclick="change2()"> 사업자 회원</label>
+<form id="frm" method="post" action="http://172.30.1.51:8080/web/memberlogin.do">
+	<input type="hidden" name="part" value="0">  
+	<div id="box">
+	</div>
+</form>
+
+</body>
+<script>
+window.onload=change1();
+	function change1(){
+		var box = document.getElementById("box");
+		box.innerHTML="";
+		var newP = document.createElement('p');
+		//일반회원
+		newP.innerHTML =
+			"<input type='text' placeholder='아이디를 입력하세요' name='mid1'><br>"+
+			"<input type='password' placeholder='패스워드를 입력하세요' name='mpw1'><br>"+
+			"<input type='button' value='로그인' onclick='login()'>";
+		box.appendChild(newP);
+		frm.part.value="1";
+		
+	}
+	function change2(){
+		var box = document.getElementById("box");
+		box.innerHTML="";
+		var newP = document.createElement('p');
+		//사업자회원
+		newP.innerHTML =
+		"<input type='text' placeholder='아이디를 입력하세요' name='mid2'><br>"+
+		"<input type='password' placeholder='패스워드를 입력하세요' name='mpw2'><br>"+ 
+		"<input type='number' placeholder='사업자번호 10자리를 입력하세요' name='mnum' maxlength='10'><br>"+
+		"<input type='button' value='로그인' onclick='login()'>" ;
+		box.appendChild(newP);
+		frm.part.value="2";
+	}
+	
+	function login(){
+		if(frm.part.value=="1"){
+			if(frm.mid1.value=="" ){
+				alert("아이디를 입력해주세요");
+				frm.mid1.focus();
+			}
+			else if(frm.mpw1.value==""){
+				alert("패스워드를 입력해주세요");
+				frm.mpw1.focus();
+			}
+			else{
+				frm.submit();
+			}
+		}
+		else if(frm.part.value=="2"){
+			if(frm.mid2.value=="" ){
+				alert("아이디를 입력해주세요");
+				frm.mid2.focus();
+			}
+			else if(frm.mpw2.value==""){
+				alert("패스워드를 입력해주세요");
+				frm.mpw2.focus();
+			}
+			else if(frm.mnum.value==""){
+				alert("사업자 번호를 입력해주세요");
+				frm.number.focus();
+			}
+			else{
+				frm.submit();
+			}
+		}
+		
+	}
+</script>
+</html>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<display-name>web</display-name>
+	<servlet>
+        <servlet-name>agree</servlet-name>
+        <servlet-class>web.agree</servlet-class>
+    </servlet>
+ 	<servlet-mapping>
+        <servlet-name>agree</servlet-name>
+        <url-pattern>/agree.do</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>emailok</servlet-name>
+        <servlet-class>web.emailok</servlet-class>
+    </servlet>
+ 	<servlet-mapping>
+        <servlet-name>emailok</servlet-name>
+        <url-pattern>/emailok.do</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>idcheck</servlet-name>
+        <servlet-class>web.idcheck</servlet-class>
+    </servlet>
+ 	<servlet-mapping>
+        <servlet-name>idcheck</servlet-name>
+        <url-pattern>/idcheck.do</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>memberok</servlet-name>
+        <servlet-class>web.memberok</servlet-class>
+    </servlet>
+ 	<servlet-mapping>
+        <servlet-name>memberok</servlet-name>
+        <url-pattern>/memberok.do</url-pattern>
+    </servlet-mapping>
+    
+	<servlet>
+        <servlet-name>sh</servlet-name>
+        <servlet-class>web.searchok</servlet-class>
+    </servlet>
+ 	<servlet-mapping>
+        <servlet-name>sh</servlet-name>
+        <url-pattern>/searchok.do</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>code</servlet-name>
+        <servlet-class>web.htmlcodeok</servlet-class>
+    </servlet>
+ 	<servlet-mapping>
+        <servlet-name>code</servlet-name>
+        <url-pattern>/htmlcodeok.do</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>userinfo</servlet-name>
+        <servlet-class>web.userinfo</servlet-class>
+    </servlet>
+	<servlet-mapping>
+        <servlet-name>userinfo</servlet-name>
+        <url-pattern>/userinfo.do</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>subject</servlet-name>
+        <servlet-class>web.subject</servlet-class>
+    </servlet>
+	<servlet-mapping>
+        <servlet-name>subject</servlet-name>
+        <url-pattern>/subject.do</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>site</servlet-name>
+        <servlet-class>web.site</servlet-class>
+    </servlet>
+	<servlet-mapping>
+        <servlet-name>site</servlet-name>
+        <url-pattern>/site.do</url-pattern>
+    </servlet-mapping>
+    
+</web-app>
