@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>예약 시스템</title>
+</head>
+<body>
+<form id="f" method="post" action="http://172.30.1.22:8080/web/reserveB.do">
+야영장명: <input type="text" id="mt" name="mt" readonly><br>
+입실일자: <input type="text" id="indate" name="indate" readonly><br>
+퇴실일자: <input type="text" id="outdate" name="outdate" readonly><br>
+인원 수: <input type="text" id="num" name="num" readonly>명<br>
+예약번호: <input type="text" id="random" name="random" readonly><br>
+예약자명: <input type="text" id="name" name="name"><br>
+연락처: <input type="number" id="tel" name="tel" placeholder="'-' 없이 숫자만 입력해주세요"><br>
+이메일: <input type="text" id="email" name="email"><br>
+<input type="button" value="결제 선택" onclick="pay()"><br>
+</form>
+</body>
+<script>
+	var data=location.search;
+	var sp=data.split("&");
+	console.log(sp);
+	if(sp.length>1){
+		var part=sp[0].split("=");	
+		var loc=part[1].split("-");
+		var a=decodeURIComponent(loc[0]);
+		var b=decodeURI(loc[1]);
+		document.getElementById("mt").value+=decodeURI(loc[0]);
+		document.getElementById("mt").value+="-";
+		document.getElementById("mt").value+=decodeURI(loc[1]);
+		var a;
+		for(a=1; a<sp.length;a++){
+			var arr=sp[a].split("=");
+			document.getElementById(arr[0]).setAttribute("value", arr[1]);
+		}
+	}
+	
+	function pay(){
+		if(document.getElementById("name").value==""){
+			alert("이름을 입력해주세요.");
+			document.getElementById("name").focus();
+		}
+		else if(document.getElementById("tel").value==""){
+			alert("연락처를 입력해주세요.");
+			document.getElementById("tel").focus();
+		}
+		else if(document.getElementById("email").value==""){
+			alert("이메일을 입력해주세요.");
+			document.getElementById("email").focus(); 
+		}
+		else{
+			console.log(f.name.value+f.tel.value+f.email.value);
+			f.submit();
+		}
+	}
+</script>
+</html>
